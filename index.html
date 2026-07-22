@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Margiela Coffee</title>
+<meta name="description" content="Margiela Coffee — a small coffee house serving deconstructed, considered drinks. View our menu, hours, and story.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner container">
+    <a href="#top" class="logo">Margiela<span>Coffee.</span></a>
+
+    <nav class="nav" id="nav" data-open="false">
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#hours">Hours</a>
+      <a href="#menu" class="btn btn-primary nav-cta">View menu</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-blobs" aria-hidden="true">
+      <svg class="blob blob-1" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gradBrown" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#5B4941"/>
+            <stop offset="100%" stop-color="#241E1C"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#gradBrown)" d="M421,313Q404,426,291,447Q178,468,113,373Q48,278,116,177Q184,76,297,90Q410,104,443,207Q476,310,421,313Z"/>
+      </svg>
+      <svg class="blob blob-2" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#B9A9DE" d="M447,301Q437,402,338,436Q239,470,153,404Q67,338,89,229Q111,120,224,101Q337,82,410,166Q483,250,447,301Z"/>
+      </svg>
+      <svg class="blob blob-3" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#F7F4EF" d="M410,290Q400,380,313,414Q226,448,158,384Q90,320,104,225Q118,130,213,104Q308,78,368,151Q428,224,410,290Z"/>
+      </svg>
+    </div>
+
+    <div class="hero-inner container">
+      <p class="eyebrow reveal">Small-batch &middot; considered</p>
+      <h1 class="hero-title reveal">Margiela<br><em>Coffee.</em></h1>
+      <p class="hero-tagline reveal">Coffee, deconstructed down to the seam — every cup finished by hand, nothing left unconsidered.</p>
+      <div class="hero-actions reveal">
+        <a href="#menu" class="btn btn-primary">View the menu</a>
+        <a href="#about" class="link-underline">Read our story <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <a href="#menu" class="scroll-cue" aria-label="Scroll to menu">
+      <span></span>
+    </a>
+  </section>
+
+  <div class="seam-divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,20 Q30,2 60,20 T120,20 T180,20 T240,20 T300,20 T360,20 T420,20 T480,20 T540,20 T600,20 T660,20 T720,20 T780,20 T840,20 T900,20 T960,20 T1020,20 T1080,20 T1140,20 T1200,20" fill="none" stroke-dasharray="2 10" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- MENU PREVIEW -->
+  <section class="menu-preview" id="menu">
+    <div class="container">
+      <p class="eyebrow reveal">House menu</p>
+      <h2 class="section-title reveal">Small menu.<br>No excess.</h2>
+      <p class="section-lede reveal">Four drinks, held to the same standard as everything else we make — no filler on the list, none in the cup.</p>
+
+      <ul class="menu-list">
+        <li class="menu-item reveal">
+          <div class="menu-item-info">
+            <h3>Flat White</h3>
+            <p>Double ristretto, steamed milk, poured tight</p>
+          </div>
+          <div class="tag" style="--tilt:-3deg">
+            <svg class="tag-hole" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <span class="tag-price">₱140</span>
+          </div>
+        </li>
+        <li class="menu-item reveal">
+          <div class="menu-item-info">
+            <h3>Lavender Honey Latte</h3>
+            <p>House lavender-honey syrup, steamed whole milk</p>
+          </div>
+          <div class="tag" style="--tilt:2deg">
+            <svg class="tag-hole" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <span class="tag-price">₱210</span>
+          </div>
+        </li>
+        <li class="menu-item reveal">
+          <div class="menu-item-info">
+            <h3>Cold Brew, Neat</h3>
+            <p>Steeped eighteen hours, served over one large cube</p>
+          </div>
+          <div class="tag" style="--tilt:-2deg">
+            <svg class="tag-hole" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <span class="tag-price">₱160</span>
+          </div>
+        </li>
+        <li class="menu-item reveal">
+          <div class="menu-item-info">
+            <h3>Brown Sugar Oat Latte</h3>
+            <p>Oat milk, dark brown sugar, double shot</p>
+          </div>
+          <div class="tag" style="--tilt:3deg">
+            <svg class="tag-hole" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <span class="tag-price">₱210</span>
+          </div>
+        </li>
+      </ul>
+
+      <p class="menu-note reveal">Full menu in-store — ask your barista what's pouring today.</p>
+    </div>
+  </section>
+
+  <div class="seam-divider flip" aria-hidden="true">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,20 Q30,2 60,20 T120,20 T180,20 T240,20 T300,20 T360,20 T420,20 T480,20 T540,20 T600,20 T660,20 T720,20 T780,20 T840,20 T900,20 T960,20 T1020,20 T1080,20 T1140,20 T1200,20" fill="none" stroke-dasharray="2 10" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-visual reveal" aria-hidden="true">
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gradAbout" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#8A76B8"/>
+              <stop offset="100%" stop-color="#3D322E"/>
+            </linearGradient>
+          </defs>
+          <path fill="url(#gradAbout)" d="M401,269Q385,388,266,417Q147,446,90,336Q33,226,120,140Q207,54,318,96Q429,138,415,204Q401,270,401,269Z"/>
+        </svg>
+        <span class="about-visual-label">Est.<br>label no. 04</span>
+      </div>
+
+      <div class="about-copy">
+        <p class="eyebrow reveal">Our story</p>
+        <h2 class="section-title reveal">Cut from a<br>different cloth.</h2>
+        <p class="reveal">Margiela Coffee started as a single counter and a single question: what happens when you make coffee the way a good tailor makes a garment — every seam considered, nothing added for show.</p>
+        <p class="reveal">We keep the list short, source beans from growers we can name, and finish every cup by hand. What you see is what's in it — raw, exact, unfussy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS -->
+  <section class="hours" id="hours">
+    <div class="container hours-grid">
+      <div class="hours-copy">
+        <p class="eyebrow reveal">Visit us</p>
+        <h2 class="section-title reveal">Open most days,<br>closed for repairs on Tuesdays.</h2>
+        <p class="status reveal" id="statusText">Checking today's hours…</p>
+      </div>
+
+      <div class="hours-card reveal">
+        <ul>
+          <li><span>Monday</span><span class="dim">Closed</span></li>
+          <li><span>Tue – Fri</span><span>7:00 – 18:00</span></li>
+          <li><span>Saturday</span><span>8:00 – 19:00</span></li>
+          <li><span>Sunday</span><span>8:00 – 15:00</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="#top">Margiela<span>Coffee.</span></a>
+      <p>A small coffee house making considered drinks, one cup at a time.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#hours">Hours</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://twitter.com" target="_blank" rel="noopener">Twitter / X</a>
+      <a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; 2026 Margiela Coffee. All rights reserved.</p>
+    <p class="footer-signature">No. 04 &mdash; considered coffee</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
