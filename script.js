@@ -1,14 +1,14 @@
 /* ============================================================
-   MARGIELA COFFEE — interactions
-   1. Mobile nav toggle
-   2. Live open/closed status based on posted hours
-   3. Scroll-reveal for .reveal elements
+   MARGIELA COFFEE — User Interactions
+   1. Mobile navigation toggle
+   2. Live open/closed status based on business hours
+   3. Scroll reveal animation for .reveal elements
    ============================================================ */
 
 (function () {
   "use strict";
 
-  /* ---------- 1. Mobile nav toggle ---------- */
+  /* ---------- 1. Mobile Navigation Toggle ---------- */
   const navToggle = document.getElementById("navToggle");
   const nav = document.getElementById("nav");
 
@@ -23,19 +23,23 @@
       setNavOpen(!isOpen);
     });
 
-    // Close menu after a link is tapped (mobile)
+    // Close the navigation menu after a link is selected on mobile devices.
     nav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => setNavOpen(false));
     });
 
-    // Close on escape
+    // Close the navigation menu when the Escape key is pressed.
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") setNavOpen(false);
     });
   }
 
-  /* ---------- 2. Open / closed status ---------- */
-  // Hours: Monday closed, Tue–Fri 7:00–18:00, Sat 8:00–19:00, Sun 8:00–15:00
+  /* ---------- 2. Live Business Status ---------- */
+  // Business hours:
+  // Monday: Closed
+  // Tuesday–Friday: 7:00 AM–7:00 PM
+  // Saturday: 7:00 AM–8:00 PM
+  // Sunday: 8:00 AM–8:00 PM
   const HOURS = {
     1: null,              // Monday: closed
     2: [7, 19],
@@ -46,6 +50,7 @@
     0: [8, 20],
   };
 
+  // Updates the café's open/closed status based on the current day and time.
   function updateStatus() {
     const statusEl = document.getElementById("statusText");
     if (!statusEl) return;
@@ -69,6 +74,8 @@
     }
   }
 
+  // Converts a 24-hour value into a 12-hour time string.
+  // Example: 19 → "7pm"
   function formatHour(h) {
     const suffix = h >= 12 ? "pm" : "am";
     const hour12 = ((h + 11) % 12) + 1;
@@ -77,7 +84,7 @@
 
   updateStatus();
 
-  /* ---------- 3. Scroll reveal ---------- */
+  /* ---------- 3. Scroll Reveal Animation ---------- */
   const revealEls = document.querySelectorAll(".reveal");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
