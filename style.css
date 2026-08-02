@@ -33,6 +33,11 @@ body{
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
+/* Changes selection color for all elements */
+::selection {
+  background-color:var(--lavender-deep); /* Highlighting color */
+  color:var(--cream);            /* Text color inside highlight */
+}
 
 /* Subtle paper-grain texture, sits above everything, doesn't block interaction. */
 body::after{
